@@ -48,14 +48,14 @@ function SignUppage() {
                 <Form.Item<FieldType>
                     label="Username"
                     name="userName"
-                    rules={[{ required: true, message: 'Please input your Username' }]}
+                    rules={[{ required: true, message: 'Please input your username' }]}
                 >
                     <Input />
                 </Form.Item>
                 <Form.Item<FieldType>
                     label="Email ID"
                     name="emailId"
-                    rules={[{ required: true, message: 'Please input your Email ID' }]}
+                    rules={[{ required: true, message: 'Please input your email' }]}
                 >
                     <Input />
                 </Form.Item>
@@ -66,7 +66,7 @@ function SignUppage() {
                     rules={[
                         {
                             required: true,
-                            message: 'Please input your password!',
+                            message: 'Please input your password',
                         },
                     ]}
                     hasFeedback
@@ -82,14 +82,14 @@ function SignUppage() {
                     rules={[
                         {
                             required: true,
-                            message: 'Please confirm your password!',
+                            message: 'Please confirm your password',
                         },
                         ({ getFieldValue }) => ({
                             validator(_, value) {
                                 if (!value || getFieldValue('Password') === value) {
                                     return Promise.resolve();
                                 }
-                                return Promise.reject(new Error('The new password that you entered do not match!'));
+                                return Promise.reject(new Error('The confirm password that you entered do not match'));
                             },
                         }),
                     ]}
