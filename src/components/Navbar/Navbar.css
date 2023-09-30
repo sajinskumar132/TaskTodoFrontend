@@ -1,0 +1,31 @@
+.navBar{
+    padding:10px 80px ;
+    top: 0px;
+    position: sticky;
+    background-color: #2db7f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.branding{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.brandingText{
+    font-size: 20px;
+    margin: 0px;
+    font-weight: bold;
+    color: white;
+    font-style: italic;
+}
+.brandingLogo{
+    background-color: white;
+    border-radius: 10px;
+    padding: 2px;
+}
+.avatar{
+    background-color: white;
+    color: rgb(0, 110, 255);
+    font-weight: bold;
+}

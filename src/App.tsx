@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import AccessPage from './pages/access/AccessPage';
+import { Route, Routes, useNavigate } from 'react-router-dom';
+import TodoPage from './pages/todo/TodoPage';
+import { useEffect } from 'react';
+import { LocalStorageService } from './Services/LocalStorageService';
 
 function App() {
+  const navigate=useNavigate()
+  useEffect(()=>{
+    const IsLogined =LocalStorageService.GetLocalStorageData()
+    if(IsLogined){
+      navigate('/todo')
+    }else{
+      navigate('/')
+    }
+  },[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Routes>
+      <Route path='/' element={<AccessPage/>}/>
+      <Route path='/todo' element={<TodoPage/>}/>
+    </Routes>
+    </>
   );
 }
 

@@ -1,0 +1,17 @@
+.AvatarPopContent{
+    min-width: 150px;
+}
+.AvatarPopUserName{
+    font-size: 14px;
+    font-weight: 700;
+    margin: 3px;
+}
+.AvatarPopUserEmail{
+    font-size: 13px;
+    font-weight: 500;
+    margin: 4px;
+}
+.AvatarPopUserButton{
+    margin-top: 8px;
+    width: 100%;
+}

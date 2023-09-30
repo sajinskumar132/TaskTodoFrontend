@@ -1,0 +1,27 @@
+.todoList{
+    padding: 0px 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.cardStyle{
+    border: 1px solid #2db7f5;
+    max-width: 500px;
+    min-width: 350px;
+}
+.cardHead{
+    padding: 5px 8px;
+}
+.cardTitle{
+    font-size: 20px;
+    font-weight: 900;
+    margin: 0px;
+}
+.cardTag{
+    float:right
+}
+.cardContent{
+    padding: 5px 8px;
+    margin:0px;
+}
